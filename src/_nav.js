@@ -30,6 +30,12 @@ export default [
     name: 'Components',
   },
   {
+    component: 'CNavItem',
+    name: 'Телефони',
+    to: '/phones',
+    icon: 'cil-phone',
+  },
+  {
     component: 'CNavGroup',
     name: 'Base',
     to: '/base',

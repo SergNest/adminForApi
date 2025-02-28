@@ -52,6 +52,12 @@ const routes = [
             component: () => import('@/views/base/Accordion.vue'),
           },
           {
+            path: '/phones',
+            name: 'Phones',
+            component: () => import('@/views/Phones.vue'),
+            meta: { title: 'Телефони' }
+          },          
+          {
             path: '/base/breadcrumbs',
             name: 'Breadcrumbs',
             component: () => import('@/views/base/Breadcrumbs.vue'),

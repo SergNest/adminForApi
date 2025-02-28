@@ -19,3 +19,4 @@ import AppSidebar from '@/components/AppSidebar.vue'
     </div>
   </div>
 </template>
+

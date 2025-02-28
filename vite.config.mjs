@@ -10,13 +10,12 @@ export default defineConfig(() => {
     css: {
       postcss: {
         plugins: [
-          autoprefixer({}), // add options if needed
+          autoprefixer({}),
         ],
       },
     },
     resolve: {
       alias: [
-        // webpack path resolve to vitejs
         {
           find: /^~(.*)$/,
           replacement: '$1',
@@ -35,7 +34,12 @@ export default defineConfig(() => {
     server: {
       port: 3000,
       proxy: {
-        // https://vitejs.dev/config/server-options.html
+        '/api': {
+          target: 'https://skarbapi.skarb.com.ua',
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
       },
     },
   }
